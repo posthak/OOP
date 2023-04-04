@@ -12,11 +12,11 @@ public class Research {
 
     public ArrayList<String> byPerson(Person p) {
         for (Node t : tree) {
-            if (t.p1.fullName == p.fullName || t.p2.fullName == p.fullName) {
-                if (t.re == Relationship.parent) {
-                    result.add(t.p1.fullName + " и " + t.p2.getFullName() + " " + "родители");
+            if (t.getP1().getFullName() == p.getFullName() || t.getP2().getFullName() == p.getFullName()) {
+                if (t.getRe() == Relationship.parent) {
+                    result.add(t.getP1().getFullName() + " и " + t.getP2().getFullName() + " " + "родители");
                 } else {
-                    result.add(t.p2.getFullName() + " ребенок");
+                    result.add(t.getP2().getFullName() + " ребенок");
                 }
             }
         }
@@ -25,8 +25,15 @@ public class Research {
 
     public ArrayList<String> AllTree() {
         for (Node t : tree) {
-            result.add(t.p1.fullName + " " + t.re + " " + t.p2.fullName + "\n");
+            if (t.getRe() == Relationship.parent) {
+                result.add(
+                        t.getP1().getFullName() + " (возраст: " + t.getP1().getAge() + ") и " + t.getP2().getFullName()
+                                + " (возраст: " + t.getP2().getAge() + ") родители");
+            } else {
+                result.add(t.getP2().getFullName() + " ребенок");
+            }
         }
+
         return result;
     }
 

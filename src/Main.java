@@ -2,10 +2,10 @@ package src;
 
 public class Main {
     public static void main(String[] args) {
-        Person irina = new Person("Ирина");
-        Person vasya = new Person("Вася");
-        Person masha = new Person("Маша");
-        Person dasha = new Person("Даша");
+        Person irina = new Person("Ирина", "F", "40");
+        Person vasya = new Person("Вася", "M", "44");
+        Person masha = new Person("Маша", "F", "12");
+        Person dasha = new Person("Даша", "F", "10");
 
         GeoTree gt = new GeoTree();
         gt.append(irina, Relationship.parent, vasya);
@@ -13,9 +13,9 @@ public class Main {
         gt.append(vasya, Relationship.children, dasha);
 
         Research r = new Research(gt);
-        System.out.println(r.byPerson(vasya));
+        // System.out.println(r.byPerson(vasya));
         // System.out.println(r.byPerson(irina));
-        // System.out.println(r.AllTree());
+        System.out.println(r.AllTree());
 
     }
 
