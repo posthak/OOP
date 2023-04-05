@@ -14,9 +14,9 @@ public class Research {
         for (Node t : tree) {
             if (t.getP1().getFullName() == p.getFullName() || t.getP2().getFullName() == p.getFullName()) {
                 if (t.getRe() == Relationship.parent) {
-                    result.add(t.getP1().getFullName() + " и " + t.getP2().getFullName() + " " + "родители");
+                    result.add(t.getP1().getFullName() + " and  " + t.getP2().getFullName() + " " + "Parents");
                 } else {
-                    result.add(t.getP2().getFullName() + " ребенок");
+                    result.add(t.getP2().getFullName() + " Child");
                 }
             }
         }
@@ -27,13 +27,13 @@ public class Research {
         for (Node t : tree) {
             if (t.getRe() == Relationship.parent) {
                 result.add(
-                        t.getP1().getFullName() + " (возраст: " + t.getP1().getAge() + " Пол: " + t.getP1().getGender()
-                                + ") и " + t.getP2().getFullName()
-                                + " (возраст: " + t.getP2().getAge() + ", Пол: " + t.getP2().getGender()
-                                + ") - родители\n");
+                        t.getP1().getFullName() + " (Age: " + t.getP1().getAge() + " Gender: " + t.getP1().getGender()
+                                + ") and  " + t.getP2().getFullName()
+                                + " (Age: " + t.getP2().getAge() + ", Gender: " + t.getP2().getGender()
+                                + ") - Parents\n");
             } else {
-                result.add(t.getP2().getFullName() + " (возраст: " + t.getP2().getAge() + ", Пол: "
-                        + t.getP2().getGender() + ")" + " - ребенок \n");
+                result.add(t.getP2().getFullName() + " (Age: " + t.getP2().getAge() + ", Gender: "
+                        + t.getP2().getGender() + ")" + " - Child \n");
 
             }
         }

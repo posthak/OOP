@@ -1,6 +1,8 @@
 package HW_1;
 
-public class Person {
+import java.io.Serializable;
+
+public class Person implements Serializable {
     private String fullName;
     private String Age;
     private Gender Gender;
@@ -22,5 +24,14 @@ public class Person {
 
     public Gender getGender() {
         return Gender;
+    }
+
+    @Override
+    public String toString() {
+        return "Person{" +
+                "name='" + fullName + '\'' +
+                ", Age=" + Age +
+                ", Gender='" + Gender + '\'' +
+                '}';
     }
 }
