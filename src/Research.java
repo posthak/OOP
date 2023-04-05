@@ -27,10 +27,14 @@ public class Research {
         for (Node t : tree) {
             if (t.getRe() == Relationship.parent) {
                 result.add(
-                        t.getP1().getFullName() + " (возраст: " + t.getP1().getAge() + ") и " + t.getP2().getFullName()
-                                + " (возраст: " + t.getP2().getAge() + ") родители");
+                        t.getP1().getFullName() + " (возраст: " + t.getP1().getAge() + " Пол: " + t.getP1().getGender()
+                                + ") и " + t.getP2().getFullName()
+                                + " (возраст: " + t.getP2().getAge() + ", Пол: " + t.getP2().getGender()
+                                + ") - родители\n");
             } else {
-                result.add(t.getP2().getFullName() + " ребенок");
+                result.add(t.getP2().getFullName() + " (возраст: " + t.getP2().getAge() + ", Пол: "
+                        + t.getP2().getGender() + ")" + " - ребенок \n");
+
             }
         }
 

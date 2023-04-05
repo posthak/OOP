@@ -3,11 +3,11 @@ package src;
 public class Person {
     private String fullName;
     private String Age;
-    private String Sex;
+    private Gender Gender;
 
-    public Person(String fullName, String Sex, String Age) {
+    public Person(String fullName, Gender Gender, String Age) {
         this.fullName = fullName;
-        this.Sex = Sex;
+        this.Gender = Gender;
         this.Age = Age;
 
     }
@@ -20,7 +20,7 @@ public class Person {
         return Age;
     }
 
-    public String getSex() {
-        return Sex;
+    public Gender getGender() {
+        return Gender;
     }
 }
