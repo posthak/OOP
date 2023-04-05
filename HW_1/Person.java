@@ -1,4 +1,4 @@
-package src;
+package HW_1;
 
 public class Person {
     private String fullName;
