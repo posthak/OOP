@@ -14,15 +14,11 @@ public class Main {
         gt.append(irina, Relationship.children, masha);
         gt.append(vasya, Relationship.children, dasha);
 
-        // Research r = new Research(gt);
+        Research r = new Research(gt);
         // System.out.println(r.byPerson(vasya));
         // System.out.println(r.AllTree());
-
-        UploadToFile upload = new UploadToFile();
-        upload.SaveToTxt(irina);
-
-        DownloadFromFile download = new DownloadFromFile();
-        System.out.println(download.DownloadFromFile());
+        r.fileUpload();
+        r.fileDownload();
     }
 
 }

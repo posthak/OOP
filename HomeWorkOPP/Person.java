@@ -1,8 +1,6 @@
 package HomeWorkOPP;
 
-import java.io.Serializable;
-
-public class Person implements Serializable {
+public class Person {
     private String fullName;
     private String Age;
     private Gender Gender;
@@ -26,12 +24,12 @@ public class Person implements Serializable {
         return Gender;
     }
 
-    @Override
-    public String toString() {
-        return "Person{" +
-                "name='" + fullName + '\'' +
-                ", Age=" + Age +
-                ", Gender='" + Gender + '\'' +
-                '}';
-    }
+    // @Override
+    // public String toString() {
+    // return "Person{" +
+    // "name='" + fullName + '\'' +
+    // ", Age=" + Age +
+    // ", Gender='" + Gender + '\'' +
+    // '}';
+    // }
 }
