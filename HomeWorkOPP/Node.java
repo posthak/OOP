@@ -1,4 +1,4 @@
-package HW_1;
+package HomeWorkOPP;
 
 public class Node {
     /**

@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.io.ObjectOutputStream;
 import java.io.Serializable;
 
-public class UploadTxt implements Serializable {
+public class UploadToFile implements Serializable {
 
     public void SaveToTxt(Person p) throws IOException {
         ObjectOutputStream objectOutputStream = new ObjectOutputStream(

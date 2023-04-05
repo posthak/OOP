@@ -18,11 +18,11 @@ public class Main {
         // System.out.println(r.byPerson(vasya));
         // System.out.println(r.AllTree());
 
-        UploadTxt upload = new UploadTxt();
+        UploadToFile upload = new UploadToFile();
         upload.SaveToTxt(irina);
 
-        DownloadTxt download = new DownloadTxt();
-        System.out.println(download.DownloadFromTxt());
+        DownloadFromFile download = new DownloadFromFile();
+        System.out.println(download.DownloadFromFile());
     }
 
 }
