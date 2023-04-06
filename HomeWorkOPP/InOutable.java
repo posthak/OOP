@@ -1,7 +1,7 @@
 package HomeWorkOPP;
 
 public interface InOutable {
-    void fileUpload();
+    void fileUpload(GeoTree t);
 
-    void fileDownload();
+    GeoTree fileDownload();
 }

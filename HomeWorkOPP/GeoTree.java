@@ -1,8 +1,9 @@
 package HomeWorkOPP;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class GeoTree {
+public class GeoTree implements Serializable {
     private ArrayList<Node> tree = new ArrayList<>();
 
     public ArrayList<Node> getTree() {
