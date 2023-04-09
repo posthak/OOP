@@ -1,4 +1,4 @@
-package HomeWorkOPP;
+package HomeWorkOPP.src.inout;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -6,6 +6,8 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
+
+import HomeWorkOPP.src.geotree.GeoTree;
 
 public class InOut implements InOutable {
 

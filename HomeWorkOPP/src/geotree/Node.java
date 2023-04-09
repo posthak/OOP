@@ -1,6 +1,8 @@
-package HomeWorkOPP;
+package HomeWorkOPP.src.geotree;
 
 import java.io.Serializable;
+
+import HomeWorkOPP.src.person.Person;
 
 public class Node implements Serializable {
     /**
@@ -35,7 +37,11 @@ public class Node implements Serializable {
 
     @Override
     public String toString() {
-        return String.format("<%s %s %s>", p1, re, p2);
+        return String.format("<%s>", p1);
     }
+    // @Override
+    // public String toString() {
+    // return String.format("<%s - %s - %s>", p1, re, p2);
+    // }
 
 }

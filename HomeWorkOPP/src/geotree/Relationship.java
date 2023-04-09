@@ -1,4 +1,4 @@
-package HomeWorkOPP;
+package HomeWorkOPP.src.geotree;
 
 public enum Relationship {
     parent,
