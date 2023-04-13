@@ -2,8 +2,8 @@ package HomeWorkOPP.src.inout;
 
 import HomeWorkOPP.src.geotree.GeoTree;
 
-public interface InOutable {
-    void fileUpload(GeoTree t);
+public interface InOutable<E> {
+    void fileUpload(GeoTree<E> t);
 
-    GeoTree fileDownload();
+    GeoTree<E> fileDownload();
 }

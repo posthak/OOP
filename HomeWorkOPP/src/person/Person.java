@@ -2,7 +2,8 @@ package HomeWorkOPP.src.person;
 
 import java.io.Serializable;
 
-public class Person implements Serializable {// , Comparable<Person> {
+
+public class Person implements Serializable {
     private String fullName;
     private Integer Age;
     private Gender Gender;
@@ -15,7 +16,7 @@ public class Person implements Serializable {// , Comparable<Person> {
     }
 
     public String getFullName() {
-        return fullName;
+    return fullName;
     }
 
     public Integer getAge() {
@@ -32,7 +33,7 @@ public class Person implements Serializable {// , Comparable<Person> {
                 "name='" + fullName + '\'' +
                 ", Age=" + Age +
                 ", Gender='" + Gender + '\'' +
-                '}';
+                '}'+"\n";
     }
 
 }

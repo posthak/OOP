@@ -2,10 +2,11 @@ package HomeWorkOPP.src.geotree;
 
 import java.util.List;
 
-import HomeWorkOPP.src.person.Person;
+import HomeWorkOPP.src.Node;
+import HomeWorkOPP.src.Relationship;
 
-public interface Tree extends Iterable<Node> {
-    void append(Person p1, Relationship relation, Person p2);
+public interface Tree<E> extends Iterable<Node<E>> {
+    void append(E p1, Relationship relation, E p2);
 
-    List<Node> getTree();
+    List<Node<E>> getTree();
 }

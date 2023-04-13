@@ -1,39 +1,30 @@
 package HomeWorkOPP.src;
 
+import HomeWorkOPP.src.dog.Dog;
 import HomeWorkOPP.src.geotree.GeoTree;
-import HomeWorkOPP.src.geotree.Node;
-import HomeWorkOPP.src.geotree.Relationship;
 import HomeWorkOPP.src.person.Gender;
 import HomeWorkOPP.src.person.Person;
 
 public class Main {
     public static void main(String[] args) {
+
+        /// ** Add in geo Tree and Display for Human
         Person irina = new Person("Irina", Gender.female, 40);
         Person vasya = new Person("Vasja", Gender.male, 35);
         Person masha = new Person("Masha", Gender.female, 38);
         Person viktor = new Person("Viktor", Gender.male, 46);
-
-        GeoTree gt = new GeoTree();
+        GeoTree<Person> gt = new GeoTree<Person>();
         gt.append(irina, Relationship.parent, irina);
-        gt.append(masha, Relationship.parent, masha);
+        gt.append(viktor, Relationship.parent, irina);
         gt.append(vasya, Relationship.parent, vasya);
-        gt.append(viktor, Relationship.parent, viktor);
-
-        // **Sort by Name \ by Age */
-        for (Node node : gt.getTree()) {
-            System.out.println(node);
-        }
-        Service r = new Service(gt);
-        // r.sortByName();
-        r.sortByAge();
+        gt.append(masha, Relationship.parent, masha);
+        Service<Person> r = new Service<>(gt);
         System.out.println();
-        for (Node node : gt.getTree()) {
-            System.out.println(node);
-        }
 
-        // ** Display by person / All */
-        // System.out.println(r.byPerson(vasya));
-        // System.out.println(r.allTree());
+        System.out.println(r.getTree());
+
+        System.out.println();
+        System.out.println(r.byPerson(viktor));
 
         // ** Upload */
         // InOut inOut = new InOut();

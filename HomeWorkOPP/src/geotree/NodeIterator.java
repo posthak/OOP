@@ -3,11 +3,13 @@ package HomeWorkOPP.src.geotree;
 import java.util.Iterator;
 import java.util.List;
 
-public class NodeIterator implements Iterator<Node> {
-    private int index;
-    private List<Node> nodeList;
+import HomeWorkOPP.src.Node;
 
-    public NodeIterator(List<Node> NodeList) {
+public class NodeIterator<E> implements Iterator<Node<E>> {
+    private int index;
+    private List<Node<E>> nodeList;
+
+    public NodeIterator(List<Node<E>> NodeList) {
         this.nodeList = NodeList;
     }
 
@@ -17,7 +19,7 @@ public class NodeIterator implements Iterator<Node> {
     }
 
     @Override
-    public Node next() {
+    public Node<E> next() {
         return nodeList.get(index++);
     }
 }
