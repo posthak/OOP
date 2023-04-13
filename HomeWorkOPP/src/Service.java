@@ -7,9 +7,8 @@ import HomeWorkOPP.src.geotree.GeoTree;
 import HomeWorkOPP.src.geotree.GroupElement;
 import HomeWorkOPP.src.geotree.comparator.NodeComparatorByAge;
 import HomeWorkOPP.src.geotree.comparator.NodeComparatorByName;
-import HomeWorkOPP.src.person.Person;
 
-public class Service<E extends Person> {
+public class Service<E extends GroupElement> {
 
     private ArrayList<String> result = new ArrayList<>();
     private List<Node<E>> tree;
@@ -23,14 +22,14 @@ public class Service<E extends Person> {
     }
 
     public void sortByName() {
-        getTree().sort(new NodeComparatorByName());
+        getTree().sort(new NodeComparatorByName<E>());
     }
 
     public void sortByAge() {
-        getTree().sort(new NodeComparatorByAge());
+        getTree().sort(new NodeComparatorByAge<E>());
     }
 
-    public ArrayList<String> byPerson(E p) {
+    public ArrayList<String> getByElement(E p) {
         for (Node<E> t : tree) {
             if (t.getP1().getFullName() == p.getFullName() || t.getP2().getFullName() == p.getFullName()) {
                 if (t.getRe() == Relationship.parent) {
@@ -44,7 +43,7 @@ public class Service<E extends Person> {
         return result;
     }
 
-    public ArrayList<String> allTree() {
+    public ArrayList<String> getAllTree() {
         for (Node<E> t : tree) {
             if (t.getRe() == Relationship.parent) {
                 result.add(

@@ -1,18 +1,18 @@
-package HomeWorkOPP.src.person;
+package HomeWorkOPP.src.dog;
 
 import java.io.Serializable;
-
 import HomeWorkOPP.src.geotree.GroupElement;
+import HomeWorkOPP.src.person.Gender;
 
-public class Person implements Serializable, GroupElement {
+public class Dog implements Serializable, GroupElement {
     private String fullName;
-    private Integer Age;
-    private Gender Gender;
+    private Integer age;
+    private Gender gender;
 
-    public Person(String fullName, Gender Gender, Integer Age) {
+    public Dog(String fullName, Gender gender, Integer age) {
         this.fullName = fullName;
-        this.Gender = Gender;
-        this.Age = Age;
+        this.gender = gender;
+        this.age = age;
 
     }
 
@@ -23,20 +23,20 @@ public class Person implements Serializable, GroupElement {
 
     @Override
     public Integer getAge() {
-        return Age;
+        return age;
     }
 
     @Override
     public Gender getGender() {
-        return Gender;
+        return gender;
     }
 
     @Override
     public String toString() {
         return "Person{" +
                 "name='" + fullName + '\'' +
-                ", Age=" + Age +
-                ", Gender='" + Gender + '\'' +
+                ", Age=" + age +
+                ", Gender='" + gender + '\'' +
                 '}' + "\n";
     }
 

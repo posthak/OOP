@@ -16,6 +16,7 @@ public class GeoTree<E> implements Serializable, Tree<E> {
     public List<Node<E>> getTree() {
         return tree;
     }
+    
 
     @Override
     public void append(E p1, Relationship relation, E p2) {
