@@ -1,61 +1,50 @@
 package HomeWorkOPP.src;
 
-import HomeWorkOPP.src.dog.Dog;
 import HomeWorkOPP.src.geotree.GeoTree;
 import HomeWorkOPP.src.person.Gender;
 import HomeWorkOPP.src.person.Person;
 
 public class Main {
     public static void main(String[] args) {
-
-        /// ** Add in geo Tree and Display for Human
         System.out.println();
+
         System.out.println("Geo Tree for Human");
-        Person irina = new Person("Irina", Gender.female, 40);
-        Person vasya = new Person("Vasja", Gender.male, 35);
-        Person masha = new Person("Masha", Gender.female, 38);
-        Person viktor = new Person("Viktor", Gender.male, 46);
         GeoTree<Person> gt = new GeoTree<Person>();
-        gt.append(irina, Relationship.parent, irina);
-        gt.append(viktor, Relationship.parent, irina);
-        gt.append(vasya, Relationship.parent, vasya);
-        gt.append(masha, Relationship.parent, masha);
-        // Service<Person> r = new Service<>(gt);
-        for (Node<Person> p : gt) {
-            System.out.println(p.getP1());
+        Service<Person> service = new Service<>(gt);
+        Person Irina = new Person("Irina", Gender.female, 40);
+        Person Masha = new Person("Masha", Gender.female, 16);
+        Person Vasja = new Person("Vasja", Gender.male, 35);
+        Person Viktor = new Person("Viktor", Gender.male, 10);
+        Person Stepan = new Person("Stepan", Gender.male, 70);
+        service.addNode(Irina, Relationship.parent, Masha);
+        service.addNode(Vasja, Relationship.parent, Viktor);
+        service.addNode(Stepan, Relationship.parent, Irina);
+        for (Person p : gt) {
+            System.out.println(p);
         }
 
+        // ** FindByPerson */
         System.out.println();
+        System.out.println(gt.findByPerson(Irina));
 
-        /// ** Add in geo Tree and Display for Dogs
-        System.out.println("Geo Tree for Dogs");
-        Dog strelka = new Dog("Strelka", Gender.female, 4);
-        Dog belka = new Dog("Belka", Gender.female, 5);
-
-        GeoTree<Dog> gt2 = new GeoTree<Dog>();
-        gt2.append(strelka, Relationship.parent, strelka);
-        gt2.append(belka, Relationship.parent, belka);
-
-        Service<Dog> r = new Service<>(gt2);
-        System.out.println();
-        for (Node<Dog> p : gt2) {
-            System.out.println(p.getP1());
-        }
-        System.out.println();
-
-        r.sortByName();
-        for (Node<Dog> p : gt2) {
-            System.out.println(p.getP1());
-        }
-        // System.out.println(gt2.getTree());
-        // for (Node<Dog> p : gt2) {
-        // System.out.println(p.getP1());
+        // ** Sort By Name */
+        // System.out.println();
+        // gt.sortByName();
+        // for (Person p : gt) {
+        // System.out.println(p);
         // }
         // System.out.println();
-        // System.out.println(r.byPerson(viktor));
+
+        // ** Sort By Age */
+        // gt.sortByAge();
+        // System.out.println();
+        // for (Person p : gt) {
+        // System.out.println(p);
+        // }
+        // System.out.println();
 
         // ** Upload */
-        // InOut inOut = new InOut();
+        // InOut<Person> inOut = new InOut<>();
         // inOut.fileUpload(gt);
         // System.out.println(gt);
 

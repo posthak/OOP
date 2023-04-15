@@ -2,7 +2,7 @@ package HomeWorkOPP.src;
 
 import java.io.Serializable;
 
-public class Node<E> implements Serializable { // NodeGroup<E> {
+public class Node<E> implements Serializable {
     /**
      * Это класс узла
      * 
@@ -35,20 +35,10 @@ public class Node<E> implements Serializable { // NodeGroup<E> {
 
     @Override
     public String toString() {
-        return String.format("<%s>", p1);
+        return p1
+                + " relationship = " + re
+                + " " + p2 + "\n";
+        // return String.format("%s - %s - %s\n", p1, re, p2);
     }
-    // @Override
-    // public String toString() {
-    // return String.format("<%s - %s - %s>", p1, re, p2);
-    // }
-
-    // @Override
-    // public void nodeAdd(Person p1, Relationship re, Person p2) {
-    // // TODO Auto-generated method stub
-    // this.p1 = p1;
-    // this.re = re;
-    // this.p2 = p2;
-
-    // }
 
 }

@@ -6,14 +6,23 @@ import HomeWorkOPP.src.geotree.GroupElement;
 
 public class Person implements Serializable, GroupElement {
     private String fullName;
-    private Integer Age;
-    private Gender Gender;
+    private Integer age;
+    private Gender gender;
+    private Person person;
 
-    public Person(String fullName, Gender Gender, Integer Age) {
+    public Person(String fullName, Gender gender, Integer age) {
         this.fullName = fullName;
-        this.Gender = Gender;
-        this.Age = Age;
+        this.gender = gender;
+        this.age = age;
 
+    }
+
+    public void setPerson(Person person) {
+        this.person = person;
+    }
+
+    public Person getPerson() {
+        return person;
     }
 
     @Override
@@ -23,20 +32,26 @@ public class Person implements Serializable, GroupElement {
 
     @Override
     public Integer getAge() {
-        return Age;
+        return age;
     }
 
     @Override
     public Gender getGender() {
-        return Gender;
+        return gender;
     }
 
+    // @Override
+    // public String toString() {
+    // return "Person{" +
+    // "name='" + fullName + '\'' +
+    // '}' + "\n";
+    // }
     @Override
     public String toString() {
         return "Person{" +
                 "name='" + fullName + '\'' +
-                ", Age=" + Age +
-                ", Gender='" + Gender + '\'' +
+                ", Age=" + age +
+                ", Gender='" + gender + '\'' +
                 '}' + "\n";
     }
 

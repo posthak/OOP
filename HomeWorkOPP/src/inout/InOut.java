@@ -12,7 +12,7 @@ import HomeWorkOPP.src.geotree.GeoTree;
 public class InOut<E> implements InOutable<E> {
 
     @Override
-    public void fileUpload(GeoTree<E> t) {
+    public void fileUpload(GeoTree t) {
         // try (// TODO Auto-generated method stub
         ObjectOutputStream objectOutputStream;
         try {
@@ -31,15 +31,15 @@ public class InOut<E> implements InOutable<E> {
     }
 
     @Override
-    public GeoTree<E> fileDownload() {
+    public GeoTree fileDownload() {
         // TODO Auto-generated method stub
-        GeoTree<E> gt = null;
+        GeoTree gt = null;
         ObjectInputStream objectInputStream;
         try {
             objectInputStream = new ObjectInputStream(
                     new FileInputStream("person.out"));
 
-            gt = (GeoTree<E>) objectInputStream.readObject();
+            gt = (GeoTree) objectInputStream.readObject();
             objectInputStream.close();
         } catch (FileNotFoundException e) {
             // TODO Auto-generated catch block
