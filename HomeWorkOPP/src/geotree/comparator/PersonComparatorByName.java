@@ -1,11 +1,11 @@
 package HomeWorkOPP.src.geotree.comparator;
 
 import java.util.Comparator;
-import HomeWorkOPP.src.geotree.GroupElement;
+import HomeWorkOPP.src.person.Person;
 
-public class PersonComparatorByName<E extends GroupElement> implements Comparator<E> {
+public class PersonComparatorByName implements Comparator<Person> {
     @Override
-    public int compare(E p1, E p2) {
+    public int compare(Person p1, Person p2) {
         return p1.getFullName().compareTo(p2.getFullName());
     }
 }

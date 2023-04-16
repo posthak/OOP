@@ -2,11 +2,11 @@ package HomeWorkOPP.src.geotree.comparator;
 
 import java.util.Comparator;
 
-import HomeWorkOPP.src.geotree.GroupElement;
+import HomeWorkOPP.src.person.Person;
 
-public class PersonComparatorByAge<E extends GroupElement> implements Comparator<E> {
+public class PersonComparatorByAge implements Comparator<Person> {
     @Override
-    public int compare(E o1, E o2) {
+    public int compare(Person o1, Person o2) {
         return Integer.compare(o1.getAge(), o2.getAge());
     }
 }

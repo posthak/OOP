@@ -9,7 +9,7 @@ import java.io.ObjectOutputStream;
 
 import HomeWorkOPP.src.geotree.GeoTree;
 
-public class InOut<E> implements InOutable<E> {
+public class InOut<Person> implements InOutable<Person> {
 
     @Override
     public void fileUpload(GeoTree t) {

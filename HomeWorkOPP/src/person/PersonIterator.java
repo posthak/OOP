@@ -1,13 +1,13 @@
-package HomeWorkOPP.src.geotree;
+package HomeWorkOPP.src.person;
 
 import java.util.Iterator;
 import java.util.List;
 
-public class PersonIterator<E> implements Iterator<E> {
+public class PersonIterator implements Iterator<Person> {
     private int index;
-    private List<E> personList;
+    private List<Person> personList;
 
-    public PersonIterator(List<E> personList) {
+    public PersonIterator(List<Person> personList) {
         this.personList = personList;
     }
 
@@ -17,7 +17,7 @@ public class PersonIterator<E> implements Iterator<E> {
     }
 
     @Override
-    public E next() {
+    public Person next() {
         return personList.get(index++);
     }
 }

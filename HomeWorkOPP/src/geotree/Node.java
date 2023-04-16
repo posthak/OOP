@@ -1,8 +1,10 @@
-package HomeWorkOPP.src;
+package HomeWorkOPP.src.geotree;
 
 import java.io.Serializable;
 
-public class Node<E> implements Serializable {
+import HomeWorkOPP.src.person.Relationship;
+
+public class Node<Person> implements Serializable {
     /**
      * Это класс узла
      * 
@@ -11,21 +13,21 @@ public class Node<E> implements Serializable {
      * @param p2
      */
 
-    private E p1;
+    private Person p1;
     private Relationship re;
-    private E p2;
+    private Person p2;
 
-    public Node(E p1, Relationship re, E p2) {
+    public Node(Person p1, Relationship re, Person p2) {
         this.p1 = p1;
         this.re = re;
         this.p2 = p2;
     }
 
-    public E getP1() {
+    public Person getP1() {
         return p1;
     }
 
-    public E getP2() {
+    public Person getP2() {
         return p2;
     }
 

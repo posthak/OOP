@@ -1,31 +1,38 @@
 package HomeWorkOPP.src;
 
-import HomeWorkOPP.src.geotree.GeoTree;
-import HomeWorkOPP.src.person.Gender;
-import HomeWorkOPP.src.person.Person;
+import HomeWorkOPP.src.presenter.Presenter;
+import HomeWorkOPP.src.ui.Console;
+import HomeWorkOPP.src.ui.View;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println();
 
-        System.out.println("Geo Tree for Human");
-        GeoTree<Person> gt = new GeoTree<Person>();
-        Service<Person> service = new Service<>(gt);
-        Person Irina = new Person("Irina", Gender.female, 40);
-        Person Masha = new Person("Masha", Gender.female, 16);
-        Person Vasja = new Person("Vasja", Gender.male, 35);
-        Person Viktor = new Person("Viktor", Gender.male, 10);
-        Person Stepan = new Person("Stepan", Gender.male, 70);
-        service.addNode(Irina, Relationship.parent, Masha);
-        service.addNode(Vasja, Relationship.parent, Viktor);
-        service.addNode(Stepan, Relationship.parent, Irina);
-        for (Person p : gt) {
-            System.out.println(p);
-        }
+        View view = new Console();
+        new Presenter(view);
+        view.start();
+
+        // System.out.println("Geo Tree for Human");
+        // GeoTree gt = new GeoTree();
+        // Service service = new Service(gt);
+        // service.addPerson("Irina", 40, Gender.female);
+        // service.addPerson("Vasja", 35, Gender.male);
+        // service.addPerson("Viktor", 10, Gender.male);
+        // service.addPerson("Stepan", 70, Gender.male);
+        // service.addPerson("Masha", 16, Gender.female);
+        // for (Person p : gt) {
+        // System.out.println(p);
+        // }
+        // System.out.println();
+        // service.addNode("Irina", Relationship.parent, "Masha");
+        // service.addNode("Vasja", Relationship.parent, "Viktor");
+        // service.addNode("Stepan", Relationship.parent, "Irina");
+        // // ** getAllTree */
+        // System.out.println();
+        // System.out.println(service.getNodeList());
 
         // ** FindByPerson */
-        System.out.println();
-        System.out.println(gt.findByPerson(Irina));
+        // System.out.println();
+        // System.out.println(service.findByPerson("Irina"));
 
         // ** Sort By Name */
         // System.out.println();
