@@ -91,6 +91,14 @@ public class Console implements View {
         presenter.getNodeList();
     }
 
+    public void download() {
+        presenter.download();
+    }
+
+    public void upload() {
+        presenter.upload();
+    }
+
     public void delPerson() {
         String fulName;
         System.out.println("Введите имя человека для удаления");

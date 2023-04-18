@@ -4,6 +4,7 @@ import java.util.List;
 
 import HomeWorkOPP.src.geotree.GeoTree;
 import HomeWorkOPP.src.geotree.Node;
+import HomeWorkOPP.src.inout.InOut;
 import HomeWorkOPP.src.person.Gender;
 import HomeWorkOPP.src.person.Person;
 import HomeWorkOPP.src.person.Relationship;
@@ -12,8 +13,11 @@ public class Service {
 
     private GeoTree geoTree;
 
+    private InOut inOut;
+
     public Service(GeoTree geoTree) {
         this.geoTree = geoTree;
+        this.inOut = new InOut();
     }
 
     public void sortByName() {
@@ -22,6 +26,14 @@ public class Service {
 
     public void sortByAge() {
         geoTree.sortByAge();
+    }
+
+    public void fileUpload() {
+        inOut.fileUpload(geoTree);
+    }
+
+    public GeoTree fileDownload() {
+        return inOut.fileDownload();
     }
 
     public int addPerson(String fullName, Integer age, Gender gender) {

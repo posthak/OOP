@@ -5,12 +5,13 @@ import java.util.List;
 
 import HomeWorkOPP.src.ui.commands.AddNode;
 import HomeWorkOPP.src.ui.commands.AddPerson;
-import HomeWorkOPP.src.ui.commands.Command;
 import HomeWorkOPP.src.ui.commands.DelPerson;
+import HomeWorkOPP.src.ui.commands.DownloadFromFile;
 import HomeWorkOPP.src.ui.commands.Exit;
 import HomeWorkOPP.src.ui.commands.GetNodeList;
 import HomeWorkOPP.src.ui.commands.GetPerson;
 import HomeWorkOPP.src.ui.commands.Option;
+import HomeWorkOPP.src.ui.commands.UploadToFile;
 
 public class Menu {
     private List<Option> commands;
@@ -24,6 +25,8 @@ public class Menu {
         commands.add(new DelPerson(console));
         commands.add(new GetPerson(console));
         commands.add(new GetNodeList(console));
+        commands.add(new UploadToFile(console));
+        commands.add(new DownloadFromFile(console));
         commands.add(new Exit(console));
     }
 

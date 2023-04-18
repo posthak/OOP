@@ -59,4 +59,19 @@ public class Presenter {
             view.print("Этот человек не существует в списке!");
         }
     }
+
+    public void upload() {
+        if (!service.getNodeList().isEmpty()) {
+            service.fileUpload();
+            view.print("Дерево успешно выгружены в файл");
+        } else {
+            view.print("Дерево  еще не заполнен");
+        }
+    }
+
+    public void download() {
+        view.print(service.fileDownload().toString());
+        view.print("Дерево успешно загружено из файла");
+
+    }
 }
