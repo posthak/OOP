@@ -1,7 +1,6 @@
 package HomeWorkOPP.src.presenter;
 
 import HomeWorkOPP.src.Service;
-import HomeWorkOPP.src.geotree.GeoTree;
 import HomeWorkOPP.src.person.Gender;
 import HomeWorkOPP.src.person.Relationship;
 import HomeWorkOPP.src.ui.View;
@@ -12,7 +11,7 @@ public class Presenter {
 
     public Presenter(View view) {
         this.view = view;
-        this.service = new Service(new GeoTree());
+        this.service = new Service();
         view.setPresenter(this);
     }
 
@@ -22,6 +21,10 @@ public class Presenter {
         } else {
             view.print("Этот человек уже существует в дереве!");
         }
+    }
+
+    public void findByPerson(String p1) {
+        view.print(service.findByPerson(p1).toString());
     }
 
     public void addNode(String p1, Relationship re, String p2) {
@@ -65,13 +68,14 @@ public class Presenter {
             service.fileUpload();
             view.print("Дерево успешно выгружены в файл");
         } else {
-            view.print("Дерево  еще не заполнен");
+            view.print("Дерево еще не заполнено");
         }
     }
 
     public void download() {
-        view.print(service.fileDownload().toString());
-        view.print("Дерево успешно загружено из файла");
-
+        String answer = service.fileDownload() != null
+                ? "Дерево успешно загружено из файла - " + service.fileDownload().toString()
+                : "Файл не найден";
+        view.print(answer);
     }
 }

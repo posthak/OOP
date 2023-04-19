@@ -99,6 +99,13 @@ public class Console implements View {
         presenter.upload();
     }
 
+    public void findByPerson() {
+        String fulName;
+        System.out.println("Введите имя человека для поиска в дереве?");
+        fulName = scanner.nextLine();
+        presenter.findByPerson(fulName);
+    }
+
     public void delPerson() {
         String fulName;
         System.out.println("Введите имя человека для удаления");

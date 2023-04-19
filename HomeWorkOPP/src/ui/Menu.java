@@ -8,6 +8,7 @@ import HomeWorkOPP.src.ui.commands.AddPerson;
 import HomeWorkOPP.src.ui.commands.DelPerson;
 import HomeWorkOPP.src.ui.commands.DownloadFromFile;
 import HomeWorkOPP.src.ui.commands.Exit;
+import HomeWorkOPP.src.ui.commands.FindByPerson;
 import HomeWorkOPP.src.ui.commands.GetNodeList;
 import HomeWorkOPP.src.ui.commands.GetPerson;
 import HomeWorkOPP.src.ui.commands.Option;
@@ -27,6 +28,7 @@ public class Menu {
         commands.add(new GetNodeList(console));
         commands.add(new UploadToFile(console));
         commands.add(new DownloadFromFile(console));
+        commands.add(new FindByPerson(console));
         commands.add(new Exit(console));
     }
 

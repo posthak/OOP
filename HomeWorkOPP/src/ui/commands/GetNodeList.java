@@ -16,5 +16,6 @@ public class GetNodeList extends Command {
     @Override
     public void execute() {
         getConsole().getNodeList();
+        ;
     }
 }

@@ -2,19 +2,19 @@ package HomeWorkOPP.src.ui.commands;
 
 import HomeWorkOPP.src.ui.Console;
 
-public class DelPerson extends Command {
+public class FindByPerson extends Command {
 
-    public DelPerson(Console console) {
+    public FindByPerson(Console console) {
         super(console);
     }
 
     @Override
     public String description() {
-        return "Удалить человека и списка";
+        return "Найти человека в дереве";
     }
 
     @Override
     public void execute() {
-        getConsole().delPerson();
+        getConsole().findByPerson();
     }
 }

@@ -15,8 +15,8 @@ public class Service {
 
     private InOut inOut;
 
-    public Service(GeoTree geoTree) {
-        this.geoTree = geoTree;
+    public Service() {
+        this.geoTree = new GeoTree();
         this.inOut = new InOut();
     }
 
